@@ -8,31 +8,23 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/home',
-    component: () => import('@/views/home/index.vue'),
-    meta: {
-      title: '首页'
-    }
+    component: () => import('@/views/home/index.vue')
   },
   {
     path: '/favor',
-    component: () => import('@/views/favor/index.vue'),
-    meta: {
-      title: '收藏'
-    }
+    component: () => import('@/views/favor/index.vue')
   },
   {
     path: '/order',
-    component: () => import('@/views/order/index.vue'),
-    meta: {
-      title: '订单'
-    }
+    component: () => import('@/views/order/index.vue')
   },
   {
     path: '/message',
-    component: () => import('@/views/message/index.vue'),
-    meta: {
-      title: '消息'
-    }
+    component: () => import('@/views/message/index.vue')
+  },
+  {
+    path: '/city',
+    component: () => import('@/views/city/index.vue')
   }
 ];
 

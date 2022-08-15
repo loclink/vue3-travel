@@ -2,9 +2,18 @@
 import getAssetURL from '@/utils/load-assets';
 import { useHomeStore } from '@/store/modules/home';
 import { storeToRefs } from 'pinia';
+import { useRouter } from 'vue-router';
 
 // 获取homeStore
 const homeStore = useHomeStore();
+
+// 处理点击跳转
+const router = useRouter();
+const handleClickLocation = () => {
+  router.push({
+    path: '/city'
+  });
+};
 
 // 获取热门建议数据
 homeStore.getHotSuggestAction();
@@ -17,7 +26,7 @@ console.log(hotSuggests);
 
 <template>
   <div class="search-box">
-    <div class="location">
+    <div class="location" @click="() => handleClickLocation()">
       <div class="city">广州</div>
       <div class="current">
         <span class="current-text">我的位置</span>
