@@ -19,7 +19,11 @@ defineProps({
   </div>
 </template>
 
-<style scoped lang="less">
+<style scoped>
+/* .navbar ::v-deep .van-nav-bar > .van-nav-bar__content > .van-nav-bar__title {
+  color: var(--primary-color);
+} */
+
 .navbar :deep(.van-nav-bar > .van-nav-bar__content > .van-nav-bar__title) {
   color: var(--primary-color);
 }

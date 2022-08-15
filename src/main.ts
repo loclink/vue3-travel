@@ -5,6 +5,9 @@ import pinia from '@/store';
 import './assets/css/index.css';
 
 const app = createApp(App);
+
 app.use(pinia);
 app.use(router);
 app.mount('#app');
+
+console.log(import.meta.env.MODE);

@@ -28,5 +28,6 @@ a {
 }
 
 img {
+  /* 垂直对齐图片 基线靠上 */
   vertical-align: top;
 }

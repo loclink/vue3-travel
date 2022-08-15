@@ -6,8 +6,8 @@ interface IAccountInfo {
 
 interface IResponseData {
   data: any;
-  code: number;
-  message: string;
+  errcode: number;
+  errmsg: string;
 }
 
 export type { IAccountInfo, IResponseData };
