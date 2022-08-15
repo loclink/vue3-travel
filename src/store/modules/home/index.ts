@@ -1,4 +1,4 @@
-import { defineStore, type StateTree, type _ActionsTree, type _GettersTree } from 'pinia';
+import { defineStore } from 'pinia';
 import { getHotSuggests } from '@/service/modules/home';
 
 const useHomeStore = defineStore('home', {

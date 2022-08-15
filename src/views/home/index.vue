@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import Navbar from '../../base-ui/navbar.vue';
 import Banner from './cpns/banner/index.vue';
 import SearchBox from './cpns/search-box/index.vue';
+import Navbar from '../../base-ui/navbar.vue';
 </script>
 
 <template>
