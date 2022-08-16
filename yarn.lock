@@ -836,6 +836,11 @@ camelcase@^6.0.0:
   resolved "https://registry.npmjs.org/camelcase/-/camelcase-6.3.0.tgz"
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
+candy-bag@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/candy-bag/-/candy-bag-0.0.3.tgz#a64c88307a22a36bd166b4f2c036b123b5d7c826"
+  integrity sha512-/UzAGfCvaBFJlGOCxTqWyfCkMDtQP34+aSAgxp0y+ltG+eNcfq6kwWwLPXLug36mTQFgtUdfxeZic0+YO7YmFg==
+
 caniuse-lite@^1.0.30001370:
   version "1.0.30001376"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001376.tgz"

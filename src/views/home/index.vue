@@ -21,6 +21,7 @@ homeStore.getCategoriesAction();
 homeStore.getHouseListAction(currentPage.value);
 
 const homeRef = ref();
+
 const { isReachBottom, scrollTop } = useScroll(homeRef);
 watch(isReachBottom, (newVal) => {
   if (newVal) {
@@ -55,6 +56,7 @@ export default { name: 'home' };
 <style scoped lang="less">
 .home {
   height: 100%;
+  background-color: #f7f8fb;
   overflow-y: auto;
 }
 </style>
