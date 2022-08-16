@@ -56,7 +56,7 @@ const { hotSuggests } = storeToRefs(homeStore);
 
     <div class="search-btn">开始搜索</div>
 
-    <div class="btn-con-bottom-powerby"><span class="txt">民宿预订服务由途家网提供</span></div>
+    <div class="btn-con-bottom-powerby"><span class="txt">本项目使用Vue3+Ts+Pinia开发</span></div>
   </div>
 </template>
 
@@ -154,7 +154,7 @@ const { hotSuggests } = storeToRefs(homeStore);
   }
 
   .btn-con-bottom-powerby {
-    color: #ccc;
+    color: #999;
     font-size: 9px;
     height: 32px;
     display: flex;
