@@ -23,6 +23,7 @@ const { categories } = storeToRefs(homeStore);
 
 <style scoped lang="less">
 .categories {
+  margin-top: 10px;
   height: 65px;
   .icon {
     height: 32px;
@@ -32,6 +33,7 @@ const { categories } = storeToRefs(homeStore);
 :deep(.van-tabs__wrap) {
   height: 100%;
 }
+
 :deep(.van-tabs__wrap .van-tab .van-tab__text) {
   display: flex;
   flex-direction: column;

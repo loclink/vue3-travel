@@ -7,6 +7,10 @@ defineProps({
 });
 </script>
 
+<script lang="ts">
+export default { name: 'navbar' };
+</script>
+
 <template>
   <div class="navbar">
     <van-nav-bar>

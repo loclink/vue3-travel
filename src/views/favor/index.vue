@@ -1,7 +1,9 @@
-<script lang="ts" setup></script>
-
+<script setup lang="ts"></script>
+<script lang="ts">
+export default { name: 'favor' };
+</script>
 <template>
   <div class="favor">favor</div>
 </template>
 
-<style scoped lang="less"></style>
+<style scoped></style>

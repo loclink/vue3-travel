@@ -25,6 +25,10 @@ const onCancel = () => {
 };
 </script>
 
+<script lang="ts">
+export default { name: 'city' };
+</script>
+
 <template>
   <div class="city">
     <div class="city-header">

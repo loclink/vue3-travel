@@ -1,8 +1,12 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
-import tabbarData from '../assets/data/tabbar';
-import getAssetURL from '../utils/load-assets';
+import tabbarData from '@/assets/data/tabbar';
+import getAssetURL from '@/utils/load-assets';
 const active = ref(0);
+</script>
+
+<script lang="ts">
+export default { name: 'tabbar' };
 </script>
 
 <template>

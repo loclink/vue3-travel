@@ -16,4 +16,14 @@ const getCategories = (): Promise<IResponseData> => {
     method: 'get'
   });
 };
-export { getHotSuggests, getCategories };
+
+// 获取房源列表
+const getHouseList = (params = { page: 1 }): Promise<IResponseData> => {
+  return http.request({
+    url: '/home/houselist',
+    method: 'get',
+    params
+  });
+};
+
+export { getHotSuggests, getCategories, getHouseList };
