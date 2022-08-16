@@ -15,13 +15,8 @@ const handleClickLocation = () => {
   });
 };
 
-// 获取热门建议数据
-homeStore.getHotSuggestAction();
-
 // 解构热门建议数据， 直接解构的话数据将变成非响应式数据，可以使用pinia提供的storeToRefs 类似于 vue 中的 toRefs 将数据变成响应式
 const { hotSuggests } = storeToRefs(homeStore);
-
-console.log(hotSuggests);
 </script>
 
 <template>

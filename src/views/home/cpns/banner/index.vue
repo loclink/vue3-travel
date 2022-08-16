@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import getAssetURL from '../../../../utils/load-assets';
+import getAssetURL from '@/utils/load-assets';
 </script>
 
 <template>

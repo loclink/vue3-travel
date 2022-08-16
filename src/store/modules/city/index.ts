@@ -3,10 +3,14 @@ import { getCityAllData } from '@/service/modules/city';
 
 const useCityStore = defineStore('city', {
   state: () => ({
-    cityAllData: {}
+    cityAllData: {
+      cityGroup: {},
+      cityGroupOverSea: {}
+    }
   }),
 
   getters: {},
+
   actions: {
     async getCityAllDataAction() {
       const result = await getCityAllData();
