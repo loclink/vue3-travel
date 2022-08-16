@@ -25,6 +25,9 @@ const { categories } = storeToRefs(homeStore);
 .categories {
   margin-top: 10px;
   height: 65px;
+  padding-top: 8px;
+  box-sizing: border-box;
+  background-color: #fff;
   .icon {
     height: 32px;
     text-align: center;

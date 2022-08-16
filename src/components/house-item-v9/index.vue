@@ -34,6 +34,7 @@ export default { name: 'house-item-v9' };
   overflow: hidden;
   .house-image {
     width: 100%;
+    height: 100%;
     border-radius: 10px;
   }
   .description {

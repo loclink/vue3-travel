@@ -74,7 +74,7 @@ export default { name: 'city' };
     position: sticky;
     height: 104px;
     top: 0;
-    z-index: 999;
+    z-index: 9;
   }
 
   .content {

@@ -9,8 +9,10 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     HouseItemV3: typeof import('./src/components/house-item-v3/index.vue')['default']
     HouseItemV9: typeof import('./src/components/house-item-v9/index.vue')['default']
+    Loading: typeof import('./src/components/loading/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SearchBar: typeof import('./src/components/search-bar/index.vue')['default']
     VanCell: typeof import('vant/es')['Cell']
     VanIndexAnchor: typeof import('vant/es')['IndexAnchor']
     VanIndexBar: typeof import('vant/es')['IndexBar']

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Tabbar from '@/base-ui/tabbar/index.vue';
+import Loading from './components/loading/index.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import Tabbar from '@/base-ui/tabbar/index.vue';
     </RouterView>
   </div>
   <Tabbar />
+  <Loading />
 </template>
 
 <style scoped></style>

@@ -5,7 +5,8 @@ import type { IResponseData } from '../../types';
 const getHotSuggests = (): Promise<IResponseData> => {
   return http.request({
     url: '/home/hotSuggests',
-    method: 'get'
+    method: 'get',
+    loading: true
   });
 };
 
@@ -13,7 +14,8 @@ const getHotSuggests = (): Promise<IResponseData> => {
 const getCategories = (): Promise<IResponseData> => {
   return http.request({
     url: '/home/categories',
-    method: 'get'
+    method: 'get',
+    loading: true
   });
 };
 
@@ -22,7 +24,8 @@ const getHouseList = (params = { page: 1 }): Promise<IResponseData> => {
   return http.request({
     url: '/home/houselist',
     method: 'get',
-    params
+    params,
+    loading: true
   });
 };
 

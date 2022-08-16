@@ -25,6 +25,7 @@ export default { name: 'house-list' };
 
 <style scoped lang="less">
 .house-list {
+  margin-top: 20px;
   .title {
     margin-top: 10px;
     padding: 0 10px;
