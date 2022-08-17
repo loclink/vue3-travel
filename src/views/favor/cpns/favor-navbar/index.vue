@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Navbar from '@/base-ui/navbar/index.vue';
-import getAssetURL from '@/utils/load-assets';
 import { navbarTabData } from '@/assets/data/favor-tab';
 import { useRouter } from 'vue-router';
 import { useCommonStore } from '@/store/modules/common';
@@ -23,19 +22,14 @@ const handleClickBackBtn = () => {
   router.back();
 };
 </script>
+
 <script lang="ts">
 export default { name: 'favor-navbar' };
 </script>
+
 <template>
   <div class="favor-navbar">
-    <Navbar>
-      <template #left>
-        <div class="back-btn" @click="handleClickBackBtn">
-          <img class="back-icon" :src="getAssetURL('common/icon_nav_back.png')" alt="" />
-          <span class="back-text">旅途</span>
-        </div>
-      </template>
-
+    <Navbar back-text="旅途" @click-btn="handleClickBackBtn">
       <template #center>
         <div class="center-tab">
           <van-tabs v-model:active="active" type="card" :color="themeColor" @change="handleChange">
@@ -43,12 +37,6 @@ export default { name: 'favor-navbar' };
               <van-tab :title="item.title" :name="item.name" />
             </template>
           </van-tabs>
-        </div>
-      </template>
-
-      <template #right>
-        <div class="menu-btn">
-          <van-icon name="wap-nav" :color="themeColor" />
         </div>
       </template>
     </Navbar>
@@ -61,26 +49,8 @@ export default { name: 'favor-navbar' };
     width: 50%;
   }
 
-  .back-btn {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    .back-icon {
-      width: 10px;
-      margin-right: 5px;
-    }
-
-    .back-text {
-      color: var(--primary-color);
-    }
-  }
-
   .center-tab {
     width: 100%;
-  }
-  .menu-btn {
-    font-size: 30px;
-    color: var(--primary-color);
   }
 }
 </style>

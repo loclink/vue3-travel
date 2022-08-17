@@ -28,9 +28,11 @@ const handleChangeNavTab = (name: string) => {
   }
 };
 </script>
+
 <script lang="ts">
 export default { name: 'favor' };
 </script>
+
 <template>
   <div class="favor">
     <FavorNavbar @change-nav-tab="handleChangeNavTab" />

@@ -58,7 +58,7 @@ export default { name: 'home' };
 </script>
 <template>
   <div class="home" ref="homeRef">
-    <Navbar title="Vue3旅途" />
+    <Navbar title="Vue3旅途" :is-show-menu="false" :is-show-back="false" />
     <Banner />
     <SearchBox />
     <Categories />
