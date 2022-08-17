@@ -10,6 +10,10 @@ Vue3Travel 是一个 web 移动端的旅行住房订购项目，该项目使用 
 
 本项目参考 coderwhy 老师的 HyTrip 完整项目，并将 JavaScript 改为使用 TypeScript 开发
 
+## 预览：
+
+线上预览地址：http://travel.tj520.top/
+
 ## 额外的包：
 
 1. VConsole 移动端设备的调试工具
