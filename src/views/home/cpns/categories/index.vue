@@ -23,15 +23,20 @@ const { categories } = storeToRefs(homeStore);
 
 <style scoped lang="less">
 .categories {
-  margin-top: 10px;
+  margin-top: 5px;
+  padding-bottom: 10px;
   height: 65px;
   padding-top: 8px;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   background-color: #fff;
   .icon {
     height: 32px;
     text-align: center;
   }
+}
+
+:deep(.van-tabs) {
+  height: 100%;
 }
 :deep(.van-tabs__wrap) {
   height: 100%;
@@ -44,7 +49,7 @@ const { categories } = storeToRefs(homeStore);
   align-items: center;
 }
 
-:deep(.van-tabs__line) {
-  bottom: 13px;
+:deep(.tablist .van-tabs__line) {
+  z-index: 99;
 }
 </style>
