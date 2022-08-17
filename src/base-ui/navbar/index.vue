@@ -14,10 +14,18 @@ export default { name: 'navbar' };
 <template>
   <div class="navbar">
     <van-nav-bar>
+      <template #left>
+        <slot name="left"></slot>
+      </template>
+
       <template #title>
         <slot name="center">
           {{ title }}
         </slot>
+      </template>
+
+      <template #right>
+        <slot name="right"></slot>
       </template>
     </van-nav-bar>
   </div>
