@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import Tabbar from '@/base-ui/tabbar/index.vue';
+import { storeToRefs } from 'pinia';
 import Loading from './components/loading/index.vue';
+import { useCommonStore } from './store/modules/common';
+const commonStore = useCommonStore();
+const { themeColor } = storeToRefs(commonStore);
 </script>
 
 <template>
@@ -11,7 +15,7 @@ import Loading from './components/loading/index.vue';
       </KeepAlive>
     </RouterView>
   </div>
-  <Tabbar />
+  <Tabbar :active-color="themeColor" />
   <Loading />
 </template>
 

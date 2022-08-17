@@ -4,7 +4,12 @@ import Navbar from '@/base-ui/navbar/index.vue';
 import getAssetURL from '@/utils/load-assets';
 import { navbarTabData } from '@/assets/data/favor-tab';
 import { useRouter } from 'vue-router';
+import { useCommonStore } from '@/store/modules/common';
+import { storeToRefs } from 'pinia';
+
 const router = useRouter();
+const commonStore = useCommonStore();
+const { themeColor } = storeToRefs(commonStore);
 const emit = defineEmits(['changeNavTab']);
 const active = ref();
 
@@ -33,7 +38,7 @@ export default { name: 'favor-navbar' };
 
       <template #center>
         <div class="center-tab">
-          <van-tabs v-model:active="active" type="card" color="#ff9854" @change="handleChange">
+          <van-tabs v-model:active="active" type="card" :color="themeColor" @change="handleChange">
             <template v-for="item in navbarTabData" :key="item.name">
               <van-tab :title="item.title" :name="item.name" />
             </template>
@@ -43,7 +48,7 @@ export default { name: 'favor-navbar' };
 
       <template #right>
         <div class="menu-btn">
-          <van-icon name="wap-nav" color="#ff9854" />
+          <van-icon name="wap-nav" :color="themeColor" />
         </div>
       </template>
     </Navbar>

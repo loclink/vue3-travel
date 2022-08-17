@@ -7,6 +7,13 @@ import { watch } from 'vue';
 const route = useRoute();
 const { path } = toRefs(route);
 const active = ref(route.path);
+
+defineProps({
+  activeColor: {
+    type: String,
+    default: ''
+  }
+});
 watch(path, (newValue) => {
   active.value = newValue;
 });
@@ -18,7 +25,7 @@ export default { name: 'tabbar' };
 
 <template>
   <div class="tabbar">
-    <van-tabbar v-model="active" active-color="#ff9854">
+    <van-tabbar v-model="active" :active-color="activeColor">
       <van-tabbar-item v-for="item of tabbarData" :key="item.text" :to="item.path" :name="item.path">
         <template #icon>
           <img v-if="route.path !== item.path" :src="getAssetURL(item.image)" :alt="item.image" />
@@ -34,6 +41,7 @@ export default { name: 'tabbar' };
 
 <style scoped lang="less">
 .tabbar {
+  height: 50px;
   // --van-tabbar-item-text-color: red;
   .active {
     color: var(--primary-color);
