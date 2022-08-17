@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia';
 import { getFavorList } from '@/service/modules/favor';
 import type { IFavorState } from './types';
+
 const useFavorStore = defineStore('favor', {
   state: (): IFavorState => ({
     favorListData: {},
