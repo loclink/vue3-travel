@@ -26,7 +26,9 @@ const { categories } = storeToRefs(homeStore);
   padding: 0;
   height: 100%;
 }
-
+:deep(.van-tabs__wrap) {
+  height: 100%;
+}
 :deep(.van-tabs__nav .van-tabs__line) {
   bottom: 0;
 }
