@@ -24,6 +24,7 @@ const { categories } = storeToRefs(homeStore);
 <style scoped lang="less">
 :deep(.van-tabs__nav) {
   padding: 0;
+  height: 100%;
 }
 
 :deep(.van-tabs__nav .van-tabs__line) {
