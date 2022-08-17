@@ -25,8 +25,10 @@ const { categories } = storeToRefs(homeStore);
 :deep(.van-tabs__nav) {
   padding: 0;
   height: 100%;
+  align-items: center;
+  display: flex;
 }
-:deep(.van-tabs__wrap) {
+:deep(.van-tabs--line .van-tabs__wrap) {
   height: 100%;
 }
 :deep(.van-tabs__nav .van-tabs__line) {
