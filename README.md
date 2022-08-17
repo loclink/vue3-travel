@@ -1,46 +1,58 @@
 # vue3-travel
 
-This template should help get you started developing with Vue 3 in Vite.
+## 概述：
 
-## Recommended IDE Setup
+Vue3Travel 是一个 web 移动端的旅行住房订购项目，该项目使用 Vue3 + TypeScript + Pinia + Vant 开发
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+项目通篇使用 Composition API （setup 语法糖）
 
-## Type Support for `.vue` Imports in TS
+本项目中，部分接口无法使用，开发目的是为了着重体验和学习 Pinia 结合 Vue3 Composition API 的开发流程。
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+本项目参考 coderwhy 老师的 HyTrip 完整项目，并将 JavaScript 改为使用 TypeScript 开发
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## 额外的包：
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. VConsole 移动端设备的调试工具
+2. CandyBag 我自己的工具库
 
-## Customize configuration
+## 使用：
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+### 1. 安装依赖
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 2. 构建开发模式
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### 3. 打包构建发布
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## 项目难点：
 
-```sh
-npm run lint
-```
+1. 移动设备的兼容性
+
+## 项目规范：
+
+- 文件名： 统一使用小写字母，多个单词使用 `-` 分割
+- 变量名： 统一使用小写字母，多个单词使用小驼峰
+- 方法名：统一使用小写字母，多个单词使用小驼峰
+- 接口：以 `I` 开头，多个单词使用大驼峰
+- 模板内使用组件：使用大驼峰，例如： `<Home></Home>`
+- 组件以文件夹的形式组织，例如：Home 组件，格式为`src/views/home/index.vue`
+- 子组件的结构为：`src/views/home/cpns/*`
+- 公共组件统一存放至：`src/base-ui` 文件夹下
+- 项目内公共组件存放至：`src/components/` 文件夹下
+- 路由使用懒加载：`() => import('@/views/home/index.vue')`
+- 条件渲染尽量避免使用`v-if` 改为使用 `<component :is="About"></component>`
+
+## 总结：
+
+pinia 用起来简直不要太爽

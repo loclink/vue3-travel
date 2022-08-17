@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia';
 import { getCityAllData } from '@/service/modules/city';
+import type { ICityState } from './types';
 
 const useCityStore = defineStore('city', {
-  state: () => ({
+  state: (): ICityState => ({
     cityAllData: {
       cityGroup: {},
       cityGroupOverSea: {}

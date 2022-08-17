@@ -4,7 +4,9 @@ import type { IFavorState } from './types';
 const useFavorStore = defineStore('favor', {
   state: (): IFavorState => ({
     favorListData: {},
-    houseItemList: []
+    houseItemList: [],
+    historyData: {},
+    historyItmeList: []
   }),
   actions: {
     async getFavorListAction() {
