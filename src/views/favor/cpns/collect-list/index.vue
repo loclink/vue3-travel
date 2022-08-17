@@ -11,11 +11,13 @@ const active = ref();
 const commonStore = useCommonStore();
 const { themeColor } = storeToRefs(commonStore);
 </script>
+
 <script lang="ts">
 export default { name: 'collect-list' };
 const favorStore = useFavorStore();
 const { houseItemList } = storeToRefs(favorStore);
 </script>
+
 <template>
   <div class="collect-list">
     <van-tabs v-model:active="active" :color="themeColor">

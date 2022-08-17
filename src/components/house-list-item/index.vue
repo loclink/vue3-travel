@@ -17,7 +17,7 @@ export default { name: 'house-list-item' };
       <img class="house-cover-image" :src="data.defaultPicture" alt="" />
       <div class="bottom">
         <van-tag round type="primary" color="#fff" text-color="#000">
-          <span class="overall">{{ data.commentBrief?.overall }}</span>
+          <span class="overall">{{ data.commentBrief?.overall }}分</span>
           <span class="line"></span>
           <span class="score-title">{{ data.commentBrief?.scoreTitle }}</span>
         </van-tag>
@@ -53,7 +53,7 @@ export default { name: 'house-list-item' };
         <div class="final-price">{{ formatPrice(data.finalPrice) }}</div>
         <div class="product-price">{{ formatPrice(data.productPrice) }}</div>
         <div class="price-tip-badge">
-          <van-tag round type="primary" color="red">
+          <van-tag v-if="data.priceTipBadge?.text" round type="primary" color="red">
             <van-icon name="volume" />
             <span class="text">{{ data.priceTipBadge?.text }}</span>
           </van-tag>
