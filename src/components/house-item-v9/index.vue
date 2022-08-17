@@ -17,7 +17,7 @@ export default { name: 'house-item-v9' };
 
 <template>
   <div class="house-item-v9">
-    <img class="house-image" :src="data.image.url" alt="" />
+    <img class="house-image" :src="data.image?.url" alt="" />
     <div class="description">
       <div class="summary-text">{{ data.summaryText }}</div>
       <div class="house-name">{{ data.houseName }}</div>

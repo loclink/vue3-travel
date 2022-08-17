@@ -27,7 +27,7 @@ export default { name: 'house-item-v3' };
       <div class="price">
         <span class="new">{{ formatPrice(data.finalPrice) }}</span>
         <span class="old">{{ data.productPrice }}</span>
-        <span class="tip">{{ data.priceTipBadge.text }}</span>
+        <span class="tip">{{ data.priceTipBadge?.text }}</span>
       </div>
     </div>
   </div>
