@@ -49,6 +49,10 @@ const { categories } = storeToRefs(homeStore);
   align-items: center;
 }
 
+:deep(.tablist) {
+  padding: 0;
+  height: 100%;
+}
 :deep(.tablist .van-tabs__line) {
   z-index: 99;
 }
