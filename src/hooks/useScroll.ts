@@ -29,7 +29,7 @@ const useScroll = (elRef?: Ref<any>) => {
         scrollHeight.value = el.scrollHeight;
       }
 
-      if (clientHeight.value + scrollTop.value >= scrollHeight.value) {
+      if (clientHeight.value + scrollTop.value >= scrollHeight.value - 60) {
         console.log('滚动到底部了');
         isReachBottom.value = true;
       }
