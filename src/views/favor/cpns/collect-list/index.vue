@@ -36,9 +36,9 @@ const { houseItemList } = storeToRefs(favorStore);
 <style scoped lang="less">
 .collect-list {
   height: calc(100vh - 50px);
+  overflow-y: scroll;
 
   .list-content {
-    overflow-y: scroll;
     padding: 10px 20px 50px;
   }
 }

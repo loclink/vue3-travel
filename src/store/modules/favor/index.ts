@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { getFavorList } from '@/service/modules/favor';
+import { getFavorHistory, getFavorList } from '@/service/modules/favor';
 import type { IFavorState } from './types';
 
 const useFavorStore = defineStore('favor', {
@@ -14,6 +14,12 @@ const useFavorStore = defineStore('favor', {
       const result = await getFavorList();
       this.favorListData = result.data.data;
       this.houseItemList = this.favorListData.items;
+    },
+
+    async getFavorHistoryAction() {
+      const result = await getFavorHistory();
+      this.historyData = result.data.data;
+      this.historyItmeList = this.historyData.items;
     }
   }
 });

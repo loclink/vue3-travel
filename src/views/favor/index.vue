@@ -11,6 +11,7 @@ const listComponent = shallowRef(HistoryList);
 
 // 获取favor页面的房屋数据
 favorStore.getFavorListAction();
+favorStore.getFavorHistoryAction();
 
 // 根据tab来判断动态组件渲染哪个 CollectList / HistoryList
 const handleChangeNavTab = (name: string) => {

@@ -8,4 +8,11 @@ const getFavorList = (): Promise<IResponseData> => {
   });
 };
 
-export { getFavorList };
+const getFavorHistory = (): Promise<IResponseData> => {
+  return http.get({
+    url: '/favor/history',
+    loading: true
+  });
+};
+
+export { getFavorList, getFavorHistory };
