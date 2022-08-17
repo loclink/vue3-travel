@@ -22,6 +22,13 @@ const { categories } = storeToRefs(homeStore);
 </template>
 
 <style scoped lang="less">
+:deep(.van-tabs__nav) {
+  padding: 0;
+}
+
+:deep(.van-tabs__nav .van-tabs__line) {
+  bottom: 0;
+}
 .categories {
   margin-top: 5px;
   padding-bottom: 10px;
@@ -47,13 +54,5 @@ const { categories } = storeToRefs(homeStore);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-:deep(.tablist) {
-  padding: 0;
-  height: 100%;
-}
-:deep(.tablist .van-tabs__line) {
-  z-index: 99;
 }
 </style>
