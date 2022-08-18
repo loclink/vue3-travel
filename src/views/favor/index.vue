@@ -40,7 +40,4 @@ export default { name: 'favor' };
   </div>
 </template>
 
-<style scoped lang="less">
-.favor {
-}
-</style>
+<style scoped lang="less"></style>

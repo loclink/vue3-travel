@@ -8,7 +8,7 @@
 
 - 本项目中，部分接口无法使用，开发目的是为了着重体验和学习 Pinia 结合 Vue3 Composition API 的开发流程。
 
-- 本项目参考 coderwhy 老师的 HyTrip 完整项目，并将 JavaScript 改为使用 TypeScript 开发，开发过程基本无照搬仅借鉴开发思路
+- 本项目参考 coderwhy 老师的 HyTrip 完整项目的开发思路，并将 JavaScript 改为使用 TypeScript 开发
 
 **本项目使用 vite 构建，_快_ 就一个字**
 
@@ -58,7 +58,6 @@ npm run build
 - 公共组件统一存放至：`src/base-ui` 文件夹下
 - 项目内公共组件存放至：`src/components/` 文件夹下
 - 路由使用懒加载：`() => import('@/views/home/index.vue')`
-- 条件渲染尽量避免使用`v-if` 改为使用 `<component :is="About"></component>`
 
 ## 总结：
 

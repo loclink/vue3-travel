@@ -3,4 +3,9 @@ const formatPrice = (price: string | number) => {
   else return price;
 };
 
-export { formatPrice };
+const formatDate = (date: string) => {
+  const month = new Date(date).getMonth() + 1;
+  const day = new Date(date).getDate();
+  return `${month}月${day}日`;
+};
+export { formatPrice, formatDate };

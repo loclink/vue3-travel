@@ -1,3 +1,11 @@
 .page-wrapper {
   height: calc(100vh - 50px);
 }
+
+
+.ellipsis-text-1 {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
