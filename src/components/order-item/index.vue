@@ -46,7 +46,16 @@ export default { name: 'order-item' };
         </div>
       </div>
     </div>
-    <div class="order-item-btn"></div>
+    <div class="order-item-btn">
+      <div class="countdown">
+        <van-icon name="clock-o" />
+        <span class="time">29分</span>后订单自动取消
+      </div>
+      <div class="button">
+        <div class="btn-item contact">联系房东</div>
+        <div class="btn-item pay">去支付</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -96,16 +105,13 @@ export default { name: 'order-item' };
       .bottom-time {
         color: #fff;
         text-align: center;
-
         .date {
           font-size: 16px;
         }
-
         .time {
           font-size: 12px;
         }
       }
-
       .icon {
         width: 16px;
         height: 12px;
@@ -126,6 +132,40 @@ export default { name: 'order-item' };
           color: var(--primary-color);
           font-size: 16px;
         }
+      }
+    }
+  }
+
+  .order-item-btn {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .countdown {
+      margin-right: 20px;
+      .time {
+        color: var(--primary-color);
+        margin-left: 3px;
+      }
+    }
+    .button {
+      display: flex;
+      .contact {
+        border: 1px solid #e9e9e9;
+        margin-right: 8px;
+      }
+
+      .pay {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+      .btn-item {
+        width: 75px;
+        height: 34px;
+        border-radius: 5px;
+        line-height: 34px;
+        text-align: center;
       }
     }
   }
