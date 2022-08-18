@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     HouseItemV9: typeof import('./src/components/house-item-v9/index.vue')['default']
     HouseListItem: typeof import('./src/components/house-list-item/index.vue')['default']
     Loading: typeof import('./src/components/loading/index.vue')['default']
+    NotMessage: typeof import('./src/components/not-message/index.vue')['default']
     OrderItem: typeof import('./src/components/order-item/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
