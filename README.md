@@ -58,7 +58,8 @@ npm run build
 - 公共组件统一存放至：`src/base-ui` 文件夹下
 - 项目内公共组件存放至：`src/components/` 文件夹下
 - 路由使用懒加载：`() => import('@/views/home/index.vue')`
+- .vue 文件结构顺序 `script` -> `template` -> `style`
 
 ## 总结：
 
-pinia + vue3 路转粉
+vue3 结合 pinia 与 vue3 结合 vuex 相比较，前者无论在定义 state 还是在使用 state 都比 vuex 要方便得多，在 ts 项目中，pinia 都比 vuex 具备更加便携和智能的类型推导能力。在本项目中，pinia 完全可以替代 vuex 作为一种新的状态管理方案，在使用体验上完全不输 vuex，甚至有过之而无不及。
