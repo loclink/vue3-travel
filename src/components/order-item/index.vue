@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import getAssetURL from '@/utils/load-assets';
-import { formatDate } from '@/utils/format';
+import { formatDate, formatPrice, getDateWeek } from '@/utils/format';
 const props = defineProps({
   data: {
     type: Object,
@@ -32,15 +32,18 @@ export default { name: 'order-item' };
       <div class="bottom">
         <div class="star-time bottom-time">
           <div class="date">{{ formatDate(data.checkInDate) }}</div>
-          <div class="time"></div>
+          <div class="time">{{ `${getDateWeek(data.checkInDate)}${data.checkInLatestTime}` }}</div>
         </div>
         <img class="icon" :src="getAssetURL('order/icon_right_orderlist.png')" alt="" />
         <div class="end-time bottom-time">
-          <div class="date"></div>
-          <div class="time"></div>
+          <div class="date">{{ formatDate(data.checkOutDate) }}</div>
+          <div class="time">{{ `${getDateWeek(data.checkOutDate)}${data.checkOutLatestTime}` }}</div>
         </div>
         <div class="line"></div>
-        <div class="price"></div>
+        <div class="price">
+          <div class="name">支付总价</div>
+          <div class="total-amout">{{ formatPrice(data.prepayAmount) }}</div>
+        </div>
       </div>
     </div>
     <div class="order-item-btn"></div>
@@ -88,9 +91,40 @@ export default { name: 'order-item' };
       background: rgba(9, 10, 14, 0.7);
       bottom: 0;
       display: flex;
+      align-items: center;
+      justify-content: center;
       .bottom-time {
+        color: #fff;
+        text-align: center;
+
         .date {
-          color: #fff;
+          font-size: 16px;
+        }
+
+        .time {
+          font-size: 12px;
+        }
+      }
+
+      .icon {
+        width: 16px;
+        height: 12px;
+        margin: 0 10px;
+      }
+
+      .line {
+        background-color: #fff;
+        height: 40px;
+        width: 1px;
+        margin: 0 20px;
+      }
+
+      .price {
+        color: #fff;
+        text-align: center;
+        .total-amout {
+          color: var(--primary-color);
+          font-size: 16px;
         }
       }
     }

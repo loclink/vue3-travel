@@ -3,7 +3,8 @@ import type { IResponseData } from '../../types';
 const getOrderList = (params: object): Promise<IResponseData> => {
   return http.get({
     url: '/order/list',
-    params
+    params,
+    loading: true
   });
 };
 

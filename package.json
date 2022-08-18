@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "candy-bag": "^0.0.3",
+    "dayjs": "^1.11.5",
     "normalize.css": "^8.0.1",
     "pinia": "^2.0.18",
     "vant": "^3.5.4",

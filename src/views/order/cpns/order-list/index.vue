@@ -19,4 +19,8 @@ export default { name: 'order-list' };
   </div>
 </template>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.order-list {
+  padding: 0 0 50px;
+}
+</style>
