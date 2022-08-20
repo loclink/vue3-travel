@@ -22,6 +22,7 @@ onActivated(() => {
   detailStore.getDetailInfoAction(route.params.id);
 });
 
+// 非活跃
 onDeactivated(() => {
   detailStore.detailInfo = {};
 });
@@ -49,6 +50,8 @@ export default { name: 'detail' };
   width: 100vw;
   z-index: 999;
   background-color: #f5f7fa;
+  overflow-y: auto;
+  // padding-bottom: 60px;
 
   .panel-wrapper {
     background-color: #fff;
