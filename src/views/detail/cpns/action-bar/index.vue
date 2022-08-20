@@ -50,8 +50,9 @@ export default { name: 'action-bar' };
     flex-direction: column;
     font-size: 16px;
     border-right: 1px solid #ccc;
-    padding-right: 20px;
     margin: 10px 0;
+    padding: 0 10px;
+    color: #333;
   }
 
   .price {
