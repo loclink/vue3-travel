@@ -58,6 +58,7 @@ export default { name: 'action-bar' };
   .price {
     display: flex;
     align-items: center;
+    width: 40%;
     .final {
       .final-price {
         color: var(--primary-color);
